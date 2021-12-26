@@ -1,0 +1,201 @@
+digraph {
+  rankdir = "TB"
+  forcelabels = true
+  edge [style="invis"]
+
+  {
+    rank = same
+    node [style="invis"]
+    00 -> 01 -> 02
+  }
+
+  subgraph cluster1 {
+    style = "invis"
+
+    node1 [
+      color = "white"
+      xlabel = "(a)"
+      label = <<table border="0" cellspacing="0" color="black">
+            <tr>
+            <td><font point-size="10">1</font></td>
+            <td><font point-size="10">2</font></td>
+            <td><font point-size="10">3</font></td>
+            <td><font point-size="10">4</font></td>
+            <td><font point-size="10">5</font></td>
+            <td><font point-size="10">6</font></td>
+            </tr>
+            <tr>
+            <td port="p1" width="20" border="1" bgcolor="gray">31</td>
+            <td port="p2" width="20" border="1" bgcolor="black"><font color="white"><b>41</b></font></td>
+            <td port="p3" width="20" border="1" bgcolor="white">59</td>
+            <td port="p4" width="20" border="1" bgcolor="white">26</td>
+            <td port="p5" width="20" border="1" bgcolor="white">41</td>
+            <td port="p6" width="20" border="1" bgcolor="white">58</td>
+            </tr>
+            </table>>
+    ]
+
+    {
+      edge [style="", color="gray"]
+      node1:p2:s -> node1:p2:s [color="black"]
+    }
+
+    node4 [
+      color = "white"
+      xlabel = "(d)"
+      label = <<table border="0" cellspacing="0" color="black">
+            <tr>
+            <td><font point-size="10">1</font></td>
+            <td><font point-size="10">2</font></td>
+            <td><font point-size="10">3</font></td>
+            <td><font point-size="10">4</font></td>
+            <td><font point-size="10">5</font></td>
+            <td><font point-size="10">6</font></td>
+            </tr>
+            <tr>
+            <td port="p1" width="20" border="1" bgcolor="white">26</td>
+            <td port="p2" width="20" border="1" bgcolor="white">31</td>
+            <td port="p3" width="20" border="1" bgcolor="gray">41</td>
+            <td port="p4" width="20" border="1" bgcolor="gray">59</td>
+            <td port="p5" width="20" border="1" bgcolor="black"><font color="white"><b>41</b></font></td>
+            <td port="p6" width="20" border="1" bgcolor="white">58</td>
+            </tr>
+            </table>>
+    ]
+
+    {
+      edge [style="", color="gray"]
+      node4:p4:s -> node4:p5:s
+      node4:p5:s -> node4:p4:s [color="black"]
+    }
+
+    node1 -> node4 [minlen=2]
+  }
+
+  subgraph cluster2 {
+    style = "invis"
+
+    node2 [
+      color = "white"
+      xlabel = "(b)"
+      label = <<table border="0" cellspacing="0" color="black">
+            <tr>
+            <td><font point-size="10">1</font></td>
+            <td><font point-size="10">2</font></td>
+            <td><font point-size="10">3</font></td>
+            <td><font point-size="10">4</font></td>
+            <td><font point-size="10">5</font></td>
+            <td><font point-size="10">6</font></td>
+            </tr>
+            <tr>
+            <td port="p1" width="20" border="1" bgcolor="white">31</td>
+            <td port="p2" width="20" border="1" bgcolor="gray">41</td>
+            <td port="p3" width="20" border="1" bgcolor="black"><font color="white"><b>59</b></font></td>
+            <td port="p4" width="20" border="1" bgcolor="white">26</td>
+            <td port="p5" width="20" border="1" bgcolor="white">41</td>
+            <td port="p6" width="20" border="1" bgcolor="white">58</td>
+            </tr>
+            </table>>
+    ]
+
+    {
+      edge [style="", color="gray"]
+      node2:p3:s -> node2:p3:s [color="black"]
+    }
+
+    node5 [
+      color = "white"
+      xlabel = "(e)"
+      label = <<table border="0" cellspacing="0" color="black">
+            <tr>
+            <td><font point-size="10">1</font></td>
+            <td><font point-size="10">2</font></td>
+            <td><font point-size="10">3</font></td>
+            <td><font point-size="10">4</font></td>
+            <td><font point-size="10">5</font></td>
+            <td><font point-size="10">6</font></td>
+            </tr>
+            <tr>
+            <td port="p1" width="20" border="1" bgcolor="white">26</td>
+            <td port="p2" width="20" border="1" bgcolor="white">31</td>
+            <td port="p3" width="20" border="1" bgcolor="white">41</td>
+            <td port="p4" width="20" border="1" bgcolor="gray">41</td>
+            <td port="p5" width="20" border="1" bgcolor="gray">59</td>
+            <td port="p6" width="20" border="1" bgcolor="black"><font color="white"><b>58</b></font></td>
+            </tr>
+            </table>>
+    ]
+
+    {
+      edge [style="", color="gray"]
+      node5:p5:s -> node5:p6:s
+      node5:p6:s -> node5:p5:s [color="black"]
+    }
+
+    node2 -> node5 [minlen=2]
+  }
+
+  subgraph cluster3 {
+    style = "invis"
+
+    node3 [
+      color = "white"
+      xlabel = "(c)"
+      label = <<table border="0" cellspacing="0" color="black">
+            <tr>
+            <td><font point-size="10">1</font></td>
+            <td><font point-size="10">2</font></td>
+            <td><font point-size="10">3</font></td>
+            <td><font point-size="10">4</font></td>
+            <td><font point-size="10">5</font></td>
+            <td><font point-size="10">6</font></td>
+            </tr>
+            <tr>
+            <td port="p1" width="20" border="1" bgcolor="gray">31</td>
+            <td port="p2" width="20" border="1" bgcolor="gray">41</td>
+            <td port="p3" width="20" border="1" bgcolor="gray">59</td>
+            <td port="p4" width="20" border="1" bgcolor="black"><font color="white"><b>26</b></font></td>
+            <td port="p5" width="20" border="1" bgcolor="white">41</td>
+            <td port="p6" width="20" border="1" bgcolor="white">58</td>
+            </tr>
+            </table>>
+    ]
+
+    {
+      edge [style="", color="gray"]
+      node3:p1:s -> node3:p2:s
+      node3:p2:s -> node3:p3:s
+      node3:p3:s -> node3:p4:s
+      node3:p4:s -> node3:p1:s [color="black"]
+    }
+
+    node6 [
+      color = "white"
+      xlabel = "(f)"
+      label = <<table border="0" cellspacing="0" color="black">
+            <tr>
+            <td><font point-size="10">1</font></td>
+            <td><font point-size="10">2</font></td>
+            <td><font point-size="10">3</font></td>
+            <td><font point-size="10">4</font></td>
+            <td><font point-size="10">5</font></td>
+            <td><font point-size="10">6</font></td>
+            </tr>
+            <tr>
+            <td port="p1" width="20" border="1" bgcolor="white">26</td>
+            <td port="p2" width="20" border="1" bgcolor="white">31</td>
+            <td port="p3" width="20" border="1" bgcolor="white">41</td>
+            <td port="p4" width="20" border="1" bgcolor="white">41</td>
+            <td port="p5" width="20" border="1" bgcolor="white">58</td>
+            <td port="p6" width="20" border="1" bgcolor="white">59</td>
+            </tr>
+            </table>>
+    ]
+
+    node3 -> node6 [minlen=2]
+  }
+
+  00 -> node1 ;
+  01 -> node2 ;
+  02 -> node3 ;
+}
